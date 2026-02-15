@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhotoSphere Demo Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card hero-card">
+        <p class="eyebrow">Willkommen bei PhotoSphere</p>
+        <h1>Dein Demo-Portal für Foto-Posts</h1>
+        <p class="subtitle">
+          Teile deine Bilder mit einem modernen Upload-Bereich und teste den Login
+          mit Demo-Zugangsdaten.
+        </p>
+
+        <div class="demo-login">
+          <h2>Demo-Login</h2>
+          <p><strong>Benutzername:</strong> demo_user</p>
+          <p><strong>Passwort:</strong> photos123</p>
+        </div>
+      </section>
+
+      <section class="card form-card">
+        <form id="loginForm" class="stack" novalidate>
+          <h2>Login</h2>
+          <label for="username">Benutzername</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="z. B. demo_user"
+            required
+          />
+
+          <label for="password">Passwort</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Dein Passwort"
+            required
+          />
+
+          <button type="submit" class="btn-primary">Login</button>
+          <p id="loginMessage" class="message" aria-live="polite"></p>
+        </form>
+
+        <form id="uploadForm" class="stack" novalidate>
+          <h2>Foto-Upload</h2>
+          <label for="photoTitle">Titel deines Posts</label>
+          <input
+            id="photoTitle"
+            name="photoTitle"
+            type="text"
+            placeholder="z. B. Sonnenuntergang am See"
+            required
+          />
+
+          <label for="photoUpload">Bild auswählen</label>
+          <input
+            id="photoUpload"
+            name="photoUpload"
+            type="file"
+            accept="image/*"
+            required
+          />
+
+          <button type="submit" class="btn-secondary">Foto hochladen</button>
+          <p id="uploadMessage" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
