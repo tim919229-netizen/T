@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoDroid Emulator Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel intro">
+        <p class="badge">Konzept-Demo</p>
+        <h1>Android-Emulator im iPhone-Look</h1>
+        <p>
+          Diese Demo simuliert einen vollständigen Ablauf: Bootloader, Android-Start,
+          Einrichtungsprozess und Homescreen – in einem iPhone-artigen Geräte-Frame.
+        </p>
+
+        <div class="info">
+          <h2>Was enthalten ist</h2>
+          <ul>
+            <li>Bootloader-Ansicht mit Geräte-Checks</li>
+            <li>Android-Startanimation und Systemstatus</li>
+            <li>Setup-Assistent (Sprache, WLAN, Konto)</li>
+            <li>Homescreen inklusive App-Icons & Systemleiste</li>
+          </ul>
+        </div>
+
+        <div class="controls">
+          <button id="powerBtn" class="primary">Power</button>
+          <button id="nextBtn" class="secondary">Nächster Schritt</button>
+          <button id="resetBtn" class="ghost">Neu starten</button>
+        </div>
+        <p id="hint" class="hint" aria-live="polite"></p>
+      </section>
+
+      <section class="panel emulator">
+        <div class="device-shell">
+          <div class="notch"></div>
+
+          <div id="screen" class="screen bootloader" role="application" aria-label="Android Emulator Anzeige">
+            <div id="statusBar" class="status-bar">
+              <span>09:41</span>
+              <span>📶 5G</span>
+              <span>🔋 92%</span>
+            </div>
+
+            <div id="screenContent" class="screen-content"></div>
+
+            <div class="nav-bar">
+              <span>◁</span>
+              <span>◯</span>
+              <span>▢</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
